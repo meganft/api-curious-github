@@ -1,10 +1,7 @@
-
-<!-- <h6 class="repotitle"> Popular Repositories</h6> -->
-<ol class='pinned-repos-list mb-4'
-
-  <li class="pinned-repo-item p-3 mb-3 border border-gray-dark rounded-1 public source">
-      <span class="pinned-repo-item-content">
-        <span class="d-block">
+<div class=container>
+<div class="row">
+  <div class="col-md-3">
+      <div class="pinned-repos-list">
             <a href='/"#{current_user.username}"/hello-world' class="text-bold">
            <span class="repo js-repo" title="hello-world">hello-world</span>
             </a>
@@ -12,6 +9,21 @@
         <p class="pinned-repo-desc text-gray text-small d-block mt-2 mb-3"></p>
         <p class="mb-0 f6 text-gray">
         </p>
-      </span>
-    </li>
-  </ol>
+      </div>
+    </div>
+  <div class="col-md-2">
+  </div>
+    <div class="col-md-3">
+        <div class="pinned-repos-list">
+              <a href='/"#{current_user.username}"/hello-world' class="text-bold">
+             <span class="repo js-repo" title="hello-world">another-repo</span>
+              </a>
+          </span>
+          <p class="pinned-repo-desc text-gray text-small d-block mt-2 mb-3"></p>
+          <p class="mb-0 f6 text-gray">
+          </p>
+        </div>
+      </div>
+
+  </div>
+</div>

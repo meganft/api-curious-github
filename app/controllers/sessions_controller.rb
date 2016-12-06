@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
    user.profile_picture = auth["avatar_url"]
    user.name            = auth["name"]
    user.joined_date     = auth["created_at"]
-   user.location     = auth["location"]
+   user.location        = auth["location"]
    user.save
 
    session[:user_id] = user.id
