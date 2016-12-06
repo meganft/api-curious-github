@@ -8,8 +8,8 @@ describe "GithubService" do
 
       expect(user_repos.class).to eq(Array)
       expect(user_repos.first).to have_key(:id)
-      expect(user_repos.first).to have_key(:name)
       expect(user_repos.first).to have_key(:language)
+      expect(user_repos.first[:owner][:login]).to eq("meganft")
     end
   end
 end
