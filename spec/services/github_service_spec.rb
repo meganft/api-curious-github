@@ -1,14 +1,15 @@
 require 'rails_helper'
 
 describe "GithubService" do
-  context "#user_info" do
-    it "returns user data" do
-      github_user = GithubService.new.user_info
+  context "#get_repos" do
+    it "returns users repos" do
 
-      expect(github_user.class).to eq(Hash)
-      # expect(averages).to have_key(:avg_dni)
-      # expect(averages).to have_key(:avg_ghi)
-      # expect(averages).to have_key(:avg_lat_tilt)
+      user_repos = GithubService.new.get_repos("meganft")
+
+      expect(user_repos.class).to eq(Array)
+      expect(user_repos.first).to have_key(:id)
+      expect(user_repos.first).to have_key(:name)
+      expect(user_repos.first).to have_key(:language)
     end
   end
 end
