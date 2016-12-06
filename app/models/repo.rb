@@ -3,7 +3,6 @@ class Repo
   attr_reader :id, :name, :language, :url
 
   def initialize(attributes={})
-
     @id = attributes[:id]
     @name = attributes[:name]
     @language = attributes[:language]
@@ -16,6 +15,5 @@ class Repo
       Repo.new(repo_info)
     end
   end
-
 
 end

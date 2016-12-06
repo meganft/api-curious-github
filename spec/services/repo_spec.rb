@@ -8,6 +8,9 @@ describe "Repo" do
       expect(repos[0]).to be_a(Repo)
       expect(repos).to be_a(Array)
       expect(repos[0].id).to be_truthy
+      expect(repos[0].language).to be_truthy
+      expect(repos[0].url).to be_truthy
+      expect(repos[0].id).to be_truthy
     end
   end
 end
