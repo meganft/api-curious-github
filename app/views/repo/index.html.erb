@@ -1,0 +1,27 @@
+
+<div class="container">
+  <div class="index-container">
+    <div class="row">
+
+      <div class="col-md-3"> <%= render partial: 'shared/sidenav' %></div>
+      <div class="col-md-9 offset-md-3"> <%= render partial: 'shared/userprofilenav' %> </div>
+
+      <div class="col-md-9 offset-md-3 repo-list">
+        <nav class="navbar navbar-light bg-faded">
+          <form class="form-inline float-xs-left">
+            <input class="form-control" type="text" placeholder="Search repositories...">
+            <button class="btn btn-outline-success" type="submit">Search</button><br>
+          </form>
+        </nav>
+        <% @repos.each do |repo| %>
+        <%= link_to repo.name, repo.url %><br>
+        <p class="language font" style="font-size:12px;">
+          <%= repo.language %>
+          Updated <%= time_ago_in_words(repo.updated) %> ago </p>
+          <hr>
+          <% end %>
+
+        </div>
+
+      </div>
+    </div>
