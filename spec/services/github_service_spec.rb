@@ -21,4 +21,26 @@ describe "GithubService" do
       expect(user[:login]).to eq("meganft")
     end
   end
+
+  context "#get_followers" do
+    it "returns one users followers" do
+      token = ENV["github_user_token"]
+      followers = GithubService.new(token).get_followers
+
+      expect(followers.class).to eq(Array)
+      expect(followers.first).to have_key(:login)
+      expect(followers.first[:login]).to eq("annadolan")
+    end
+  end
+
+  context "#get_following" do
+    it "returns all followed by one user" do
+      token = ENV["github_user_token"]
+      following = GithubService.new(token).get_following
+
+      expect(following.class).to eq(Array)
+      expect(following.first).to have_key(:login)
+      expect(following.first[:login]).to eq("annadolan")
+    end
+  end
 end
