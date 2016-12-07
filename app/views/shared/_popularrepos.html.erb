@@ -3,7 +3,7 @@
   <div class="col-md-3">
       <div class="pinned-repos-list">
             <a href='/"#{current_user.username}"/hello-world' class="text-bold">
-           <span class="repo js-repo" title="hello-world">hello-world</span>
+           <span class="repo js-repo" title="hello-world"> <%= @repos.first.name %> </span>
             </a>
         </span>
         <p class="pinned-repo-desc text-gray text-small d-block mt-2 mb-3"></p>

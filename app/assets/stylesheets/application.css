@@ -52,7 +52,7 @@ a:hover {
 }
 
 .navhomeshow {
-  margin-top: -370px;
+  margin-top: -400px;
   margin-bottom: 10px;
 }
 
@@ -65,7 +65,7 @@ a:hover {
 }*/
 
 .pinned-repos-list {
-  margin-top: -250px;
+  margin-top: -275px;
   width: 300px;
   border: 0.5px solid lightgrey;
   border-radius: 3%;
@@ -73,6 +73,11 @@ a:hover {
 
 
 .repo-list {
-  margin-top: -275px;
+  margin-top: -325px;
   font-size: 20px;
+  font-weight:
+}
+
+.reposearch {
+   width: 500px;
 }

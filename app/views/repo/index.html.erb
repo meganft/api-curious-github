@@ -3,25 +3,41 @@
   <div class="index-container">
     <div class="row">
 
-      <div class="col-md-3"> <%= render partial: 'shared/sidenav' %></div>
+      <div class="col-md-3"> <%= render partial: 'shared/sidenav' %></div><br>
       <div class="col-md-9 offset-md-3"> <%= render partial: 'shared/userprofilenav' %> </div>
 
       <div class="col-md-9 offset-md-3 repo-list">
-        <nav class="navbar navbar-light bg-faded">
-          <form class="form-inline float-xs-left">
-            <input class="form-control" type="text" placeholder="Search repositories...">
-            <button class="btn btn-outline-success" type="submit">Search</button><br>
-          </form>
-        </nav>
-        <% @repos.each do |repo| %>
-        <%= link_to repo.name, repo.url %><br>
-        <p class="language font" style="font-size:12px;">
-          <%= repo.language %>
-          Updated <%= time_ago_in_words(repo.updated) %> ago </p>
-          <hr>
-          <% end %>
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓">
+          <nav class="navbar navbar-light">
+            <form class="form-inline reposeach">
+              <input class="form-control" type="text" placeholder="Search repositories...">
+              <button class="btn btn-success" type="submit">
+                <%= octicon "repo" %>
+                Search</button><br>
+                <div class="btn-group" role="group">
+                  <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="#">Dropdown link</a>
+                    <a class="dropdown-item" href="#">Dropdown link</a>
+                  </div>
+                </div>
+              </form>
+              <br>
+            </nav>
+            <hr>
+          </div>
+          <br>
+          <% @repos.each do |repo| %>
+          <%= link_to repo.name, repo.url %><br>
+          <p class="language font" style="font-size:12px;">
+            <%= repo.language %>
+            Updated <%= time_ago_in_words(repo.updated) %> ago </p>
+            <hr>
+            <% end %>
+
+          </div>
 
         </div>
-
       </div>
-    </div>
