@@ -73,4 +73,14 @@ describe "GithubService" do
       expect(performed_events.first).to have_key(:actor)
     end
   end
+
+  context "#get_organizations" do
+    it "returns all organizations for one user" do
+      token = ENV["github_user_token"]
+      organizations = GithubService.new(token).get_organizations
+
+      expect(organizations.class).to eq(Array)
+      expect(organizations.first).to have_key(:login)
+    end
+  end
 end

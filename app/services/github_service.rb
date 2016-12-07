@@ -48,6 +48,11 @@ class GithubService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def get_organizations
+    response = conn.get("/user/orgs")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   private
     attr_reader :token, :conn
 end
