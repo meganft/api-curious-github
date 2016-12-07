@@ -9,20 +9,19 @@ class Repo
     @url = attributes[:url]
     @updated = attributes[:updated_at]
     @fork = attributes[:fork]
-  
+
   end
 
-  def self.by_user(username)
-    service = GithubService.new
-    mapped = service.get_repos(username).map do |repo_info|
+  def self.by_user(token)
+    service = GithubService.new(token)
+    service.get_repos.map do |repo_info|
       Repo.new(repo_info)
     end
-    mapped.sort! { |a,b| b.updated <=> a.updated }
   end
 
-  def self.six_popular(username)
-    service = GithubService.new
-    mapped = service.get_repos(username).map do |repo_info|
+  def self.six_popular(token)
+    service = GithubService.new(token)
+    mapped = service.get_repos.map do |repo_info|
       Repo.new(repo_info)
     end.first(6)
   end

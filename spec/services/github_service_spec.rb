@@ -1,22 +1,21 @@
 require 'rails_helper'
 
 describe "GithubService" do
-  context "#get_repos(username)" do
+  context "#get_repos" do
     it "returns users repos" do
-
-      user_repos = GithubService.new.get_repos("meganft")
+      token = ENV["github_user_token"]
+      user_repos = GithubService.new(token).get_repos
 
       expect(user_repos.class).to eq(Array)
       expect(user_repos.first).to have_key(:id)
       expect(user_repos.first).to have_key(:language)
-      expect(user_repos.first[:owner][:login]).to eq("meganft")
     end
   end
 
-  context "#get_user(username)" do
+  context "#get_user" do
     it "returns one users info" do
-
-      user = GithubService.new.get_user("meganft")
+      token = ENV["github_user_token"]
+      user = GithubService.new(token).get_user
 
       expect(user.class).to eq(Hash)
       expect(user[:login]).to eq("meganft")

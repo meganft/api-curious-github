@@ -27,7 +27,7 @@
 
 .form-control  {
   max-height: 30px;
-  width: 300px !important;
+  width: 350px !important;
 }
 
 
@@ -63,31 +63,31 @@ a:hover {
 }
 
 .navhomeshow {
-  margin-top: -400px;
+  margin-top: -420px;
   margin-bottom: 5px;
   max-height: 25px;
 }
 
-.navhomeshow .navbar-light .navbar-nav .nav-link {
-  color: grey !important;
+
+.navhomeshow .nav-link {
+  color: grey;
   font-family: Helvetica;
-  text-align: left;
-  padding-left: -50px;
-  font-size: 13px;
+  font-size: 14px;
+  border: none;
 }
 
-.navhomeshow .navbar-light .navbar-nav .nav-link a {
+.navhomeshow a.nav-link-active {
+  color: red !important;
+  border-bottom: 1px solid red;
+}
+
+
+.navhomeshow .nav-link {
   color: grey;
 }
 
-.navhomeshow .navbar-light .navbar-nav .nav-link a:hover {
-  color: black !important;
-}
 
 
-.navhomeshow > li {
-  padding-left: 50px;
-}
 
 .pinned-repos {
   margin-top: -300px;
