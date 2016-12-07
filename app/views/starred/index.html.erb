@@ -1,0 +1,26 @@
+
+<div class="container">
+  <div class="index-container">
+    <div class="row">
+      <div class="col-md-3"> <%= render partial: 'shared/sidenav' %></div>
+      <div class="col-md-9 offset-md-3"> <%= render partial: 'shared/userprofilenav' %> </div>
+      <div class="col-md-9 offset-md-3 repo-list">
+        <div>
+
+          <% @starred.each do |starred| %>
+            <span class="reponamelist"><%= link_to starred.name, starred.url %></span><br>
+            <span class="language font" style="font-size:12px;">
+              <% if starred.language == 'Ruby' %>
+              <%= image_tag("circle_red.png", size:"12x12") %>
+              <%= starred.language %>
+              <% else %>
+              <%= image_tag("orange-icon.png", size:"12x12") %>
+              <%= starred.language %>
+              <% end %>
+              <hr>
+      <% end %>
+      
+    </div>
+  </div>
+<%= link_to "Logout", logout_path, method: :delete %>
+</div>

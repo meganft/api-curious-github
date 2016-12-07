@@ -12,24 +12,24 @@ describe "Profile" do
     end
   end
 
-  context "#get_followers" do
+  context "#find_followers" do
     it "returns a user's followers" do
       token = ENV["github_user_token"]
       followers = Profile.find_followers(token)
 
       expect(followers.class).to eq(Array)
-      expect(followers[0].joined_date).to be_truthy
+      expect(followers[0]).to respond_to(:joined_date)
       expect(followers.first.name).to eq("Anna Dolan")
     end
   end
 
-  context "#get_following" do
+  context "#fint_following" do
     it "returns all follwing a user" do
       token = ENV["github_user_token"]
       following = Profile.find_following(token)
 
       expect(following.class).to eq(Array)
-      expect(following[0].joined_date).to be_truthy
+      expect(following[0]).to respond_to(:joined_date)
       expect(following.first.name).to eq("Erin Pintozzi")
     end
   end

@@ -86,12 +86,9 @@ a:hover {
   color: grey;
 }
 
-
-
-
 .pinned-repos {
   margin-top: -300px;
-  width: 350px;
+
 }
 
 .repo-list {

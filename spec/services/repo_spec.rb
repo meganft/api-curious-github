@@ -9,10 +9,9 @@ describe "Repo" do
 
       expect(repos[0]).to be_a(Repo)
       expect(repos).to be_a(Array)
-      expect(repos[0].id).to be_truthy
-      expect(repos[0].language).to be_truthy
-      expect(repos[0].url).to be_truthy
-      expect(repos[0].id).to be_truthy
+      expect(repos[0]).to respond_to(:id)
+      expect(repos[0]).to respond_to(:language)
+      expect(repos[0]).to respond_to(:url)
     end
   end
 
@@ -22,9 +21,8 @@ describe "Repo" do
       starred = Repo.find_starred(token)
 
       expect(starred).to be_a(Array)
-      expect(starred[0].id).to be_truthy
-      expect(starred[0].url).to be_truthy
-      expect(starred[0].id).to be_truthy
+      expect(starred[0]).to respond_to(:id)
+      expect(starred[0]).to respond_to(:url)
     end
   end
 end
