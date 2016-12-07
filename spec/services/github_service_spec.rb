@@ -54,13 +54,23 @@ describe "GithubService" do
     end
   end
 
-  context "#get_events" do
-    it "returns all recent events for one user" do
+  context "#get_received_events" do
+    it "returns all recent events received for one user" do
       token = ENV["github_user_token"]
-      events = GithubService.new(token).get_events("meganft")
+      received_events = GithubService.new(token).get_received_events("meganft")
 
-      expect(events.class).to eq(Array)
-      expect(events.first).to have_key(:actor)
+      expect(received_events.class).to eq(Array)
+      expect(received_events.first).to have_key(:actor)
+    end
+  end
+
+  context "#get_performed_events" do
+    it "returns all recent events performed for one user" do
+      token = ENV["github_user_token"]
+      performed_events = GithubService.new(token).get_performed_events("meganft")
+
+      expect(performed_events.class).to eq(Array)
+      expect(performed_events.first).to have_key(:actor)
     end
   end
 end
