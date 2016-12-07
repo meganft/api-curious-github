@@ -21,17 +21,15 @@
 
 * {
   font-family: Helvetica Neue;
+/*border: 1px solid black;*/
 }
 
 
 .form-control  {
   max-height: 30px;
+  width: 300px !important;
 }
 
- .searchrepo {
-   width: 300px;
-   max-height: 25px;
-}
 
 .navbar {
   padding-left: 125px;
@@ -52,7 +50,6 @@ a {
 
 a:hover {
   color: #4078c0 !important;
-
 }
 
 .userpic {
@@ -72,19 +69,25 @@ a:hover {
 }
 
 .navhomeshow .navbar-light .navbar-nav .nav-link {
-  color: grey;
+  color: grey !important;
   font-family: Helvetica;
-  font-weight: light;
   text-align: left;
+  padding-left: -50px;
+  font-size: 13px;
 }
+
+.navhomeshow .navbar-light .navbar-nav .nav-link a {
+  color: grey;
+}
+
+.navhomeshow .navbar-light .navbar-nav .nav-link a:hover {
+  color: black !important;
+}
+
 
 .navhomeshow > li {
   padding-left: 50px;
 }
-
-/*.navhomesearch {
-  margin-top: -280px;
-}*/
 
 .pinned-repos {
   margin-top: -300px;
@@ -130,5 +133,14 @@ a:hover {
 
 .reponamelist {
   font-weight: bolder;
+  font-size: 20px;
   color: #4078c0;
+}
+
+.btn-default:hover {
+    background-color: #d3d3d3 !important;
+}
+
+.btn-default {
+    background-color: #f1f1f1 !important;
 }

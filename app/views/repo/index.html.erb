@@ -54,6 +54,9 @@
           <%= image_tag("orange-icon.png", size:"12x12") %>
           <%= repo.language %>
           <% end %>
+          <span class="lang" style="padding-left:12px"><% if repo.fork == true %>
+          <%= octicon "repo-forked" %></span>
+          <% end %>
           <span class="lang" style="padding-left:12px">Updated <%= time_ago_in_words(repo.updated) %> ago </span></span>
           <hr>
           <% end %>
