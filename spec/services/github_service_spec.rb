@@ -43,4 +43,14 @@ describe "GithubService" do
       expect(following.first[:login]).to eq("annadolan")
     end
   end
+
+  context "#get_starred" do
+    it "returns all starred repos from one user" do
+      token = ENV["github_user_token"]
+      starred_repos = GithubService.new(token).get_starred
+
+      expect(starred_repos.class).to eq(Array)
+      expect(starred_repos.first).to have_key(:full_name)
+    end
+  end
 end

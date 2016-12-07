@@ -26,9 +26,12 @@ class Repo
     end.first(6)
   end
 
-  # def self.starred(username)
-  #   service = GithubService.new
-  # end
+  def self.find_starred(token)
+    service = GithubService.new(token)
+    mapped = service.get_starred.map do |starred_info|
+      Repo.new(starred_info)
+    end
+  end
 
 
 end
