@@ -1,29 +1,23 @@
-<div class=container>
-<div class="row">
-  <div class="col-md-3">
-      <div class="pinned-repos-list">
-            <a href='/"#{current_user.username}"/hello-world' class="text-bold">
-           <span class="repo js-repo" title="hello-world"> <%= @repos.first.name %> </span>
-            </a>
-        </span>
-        <p class="pinned-repo-desc text-gray text-small d-block mt-2 mb-3"></p>
-        <p class="mb-0 f6 text-gray">
-        </p>
+<div class="container">
+  <div class="pinned-repos">
+    <span><h6>Popular Repositories</span>
+    <span class="customrepotext">Customize your pinned repos</h6></span>
+    <% @popular_repos.each do |repo| %>
+    <div class="card card-outline-secondary text-xs-center">
+      <div class="card-block">
+        <blockquote class="card-blockquote">
+          <p class ="reponamepinned"> <%= link_to repo.name %>  </p>
+          <% if repo.language == 'Ruby' %>
+          <%= image_tag("circle_red.png", size:"12x12") %>
+          <span class="repolangpinned"><%= repo.language %></span>
+          <% else %>
+          <%= image_tag("orange-icon.png", size:"12x12") %>
+          <span class="repolangpinned"><%= repo.language %></span>
+          <% end %>
+
+        </blockquote>
       </div>
     </div>
-  <div class="col-md-2">
-  </div>
-    <div class="col-md-3">
-        <div class="pinned-repos-list">
-              <a href='/"#{current_user.username}"/hello-world' class="text-bold">
-             <span class="repo js-repo" title="hello-world">another-repo</span>
-              </a>
-          </span>
-          <p class="pinned-repo-desc text-gray text-small d-block mt-2 mb-3"></p>
-          <p class="mb-0 f6 text-gray">
-          </p>
-        </div>
-      </div>
-
+    <% end %>
   </div>
 </div>

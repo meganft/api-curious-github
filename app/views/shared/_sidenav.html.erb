@@ -1,18 +1,14 @@
-
 <nav class="sidenavbar navbar-light">
   <div class="nav navbar-nav float-*-left">
-
     <%= image_tag(current_user.profile_picture, size: "225x225", class: "userpic") %><br>
-
-    <strong><%= current_user.name %></strong><br>
-    <%= current_user.username %><br>
-    <%= link_to "Add a bio" %>
-    <hr>
-    <%= image_tag("Location-512.png", size: "13x13") %> <%= current_user.location %><br>
+    <span class="usernametitle"><%= current_user.name %></span><br>
+      <%= current_user.username %><br>
+      <%= link_to "Add a bio" %>
+      <hr>
+      <%= image_tag("Location-512.png", size: "13x13") %>
+      <%= current_user.location %><br>
       <% newdate = DateTime.parse(current_user.joined_date) %>
-    <%= image_tag("time-clock.png", size: "13x13") %> Joined on <%= newdate.strftime('%b %d, %Y') %><br>
-
-  </div>
-</nav>
-
+      <%= image_tag("time-clock.png", size: "13x13") %> Joined on <%= newdate.strftime('%b %d, %Y') %><br>
+    </div>
+  </nav>
 </div>

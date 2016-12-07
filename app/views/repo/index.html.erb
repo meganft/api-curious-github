@@ -2,42 +2,63 @@
 <div class="container">
   <div class="index-container">
     <div class="row">
-
-      <div class="col-md-3"> <%= render partial: 'shared/sidenav' %></div><br>
-      <div class="col-md-9 offset-md-3"> <%= render partial: 'shared/userprofilenav' %> </div>
-
+      <div class="col-md-3">
+        <%= render partial: 'shared/sidenav' %>
+      </div>
+      <br>
+      <div class="col-md-9 offset-md-3">
+        <%= render partial: 'shared/userprofilenav' %>
+      </div>
       <div class="col-md-9 offset-md-3 repo-list">
-        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓">
-          <nav class="navbar navbar-light">
-            <form class="form-inline reposeach">
-              <input class="form-control" type="text" placeholder="Search repositories...">
-              <button class="btn btn-success" type="submit">
-                <%= octicon "repo" %>
-                Search</button><br>
-                <div class="btn-group" role="group">
-                  <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                  </div>
-                </div>
-              </form>
-              <br>
-            </nav>
-            <hr>
+        <div>
+          <div class="form-group float-left">
+            <p class="searchrepo"><input type="text" class="form-control" placeholder="Search Repositories...">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Type: <b>All</b> <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">All</a></li>
+                <li><a href="#">Public</a></li>
+                <li><a href="#">Private</a></li>
+                <li><a href="#">Sources</a></li>
+                <li><a href="#">Forks</a></li>
+                <li><a href="#">Mirrors</a></li>
+              </ul>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Language: <b>All</b> <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">All</a></li>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">Ruby</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-success" href="#" role="button"><%= octicon "repo"%> New</a>
+          </p>
           </div>
-          <br>
-          <% @repos.each do |repo| %>
-          <%= link_to repo.name, repo.url %><br>
-          <p class="language font" style="font-size:12px;">
-            <%= repo.language %>
-            Updated <%= time_ago_in_words(repo.updated) %> ago </p>
-            <hr>
-            <% end %>
+        </form>
+      </div>
+      <hr>
 
-          </div>
+      <div class="repos" style="padding-right:20px">
+        <% @repos.each do |repo| %>
+        <span class="reponamelist"<%= link_to repo.name, repo.url %></span><br>
+        <span class="language font" style="font-size:12px;">
+          <% if repo.language == 'Ruby' %>
+          <%= image_tag("circle_red.png", size:"12x12") %>
+          <%= repo.language %>
+          <% else %>
+          <%= image_tag("orange-icon.png", size:"12x12") %>
+          <%= repo.language %>
+          <% end %>
+          <span class="lang" style="padding-left:12px">Updated <%= time_ago_in_words(repo.updated) %> ago </span></span>
+          <hr>
+          <% end %>
 
         </div>
       </div>
+    </div>
+  </div>

@@ -12,10 +12,22 @@ class Repo
 
   def self.by_user(username)
     service = GithubService.new
-    service.get_repos(username).map do |repo_info|
+    mapped = service.get_repos(username).map do |repo_info|
       Repo.new(repo_info)
     end
+    mapped.sort! { |a,b| b.updated <=> a.updated }
   end
+
+  def self.six_popular(username)
+    service = GithubService.new
+    mapped = service.get_repos(username).map do |repo_info|
+      Repo.new(repo_info)
+    end.first(6)
+  end
+
+  # def self.starred(username)
+  #   service = GithubService.new
+  # end
 
 
 end
