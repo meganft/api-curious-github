@@ -40,7 +40,7 @@ describe "GithubService" do
 
       expect(following.class).to eq(Array)
       expect(following.first).to have_key(:login)
-      expect(following.first[:login]).to eq("annadolan")
+      expect(following.first[:login]).to eq("epintozzi")
     end
   end
 
@@ -51,6 +51,16 @@ describe "GithubService" do
 
       expect(starred_repos.class).to eq(Array)
       expect(starred_repos.first).to have_key(:full_name)
+    end
+  end
+
+  context "#get_events" do
+    it "returns all recent events for one user" do
+      token = ENV["github_user_token"]
+      events = GithubService.new(token).get_events("meganft")
+
+      expect(events.class).to eq(Array)
+      expect(events.first).to have_key(:actor)
     end
   end
 end

@@ -30,7 +30,7 @@ describe "Profile" do
 
       expect(following.class).to eq(Array)
       expect(following[0].joined_date).to be_truthy
-      expect(following.first.name).to eq("Anna Dolan")
+      expect(following.first.name).to eq("Erin Pintozzi")
     end
   end
 end
