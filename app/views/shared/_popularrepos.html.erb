@@ -7,6 +7,9 @@
       <div class="card-block">
         <blockquote class="card-blockquote">
           <p class ="reponamepinned"> <%= link_to repo.name %>  </p>
+          <!-- <% if repo.description != nil %>
+          <span class = "repodesc"><%= repo.description %></span><br>
+          <% end %> -->
           <% if repo.language == 'Ruby' %>
           <%= image_tag("circle_red.png", size:"12x12") %>
           <span class="repolangpinned"><%= repo.language %></span>

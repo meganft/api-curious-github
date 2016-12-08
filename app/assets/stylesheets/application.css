@@ -28,6 +28,7 @@
 .form-control  {
   max-height: 30px;
   width: 350px !important;
+  display:inline;
 }
 
 
@@ -85,17 +86,18 @@ a:hover {
 }
 
 .pinned-repos {
-  margin-top: -420px;
+  margin-top: -450px;
 }
 
 .repo-list {
-  margin-top: -400px;
+  margin-top: -450px;
   font-size: 20px;
 }
 
 .card-block {
   text-align: left;
   max-height: 100px;
+  padding: 1.15em;
 }
 
 .customrepotext {
@@ -145,7 +147,7 @@ a:hover {
 
 .followslocation {
   font-size: 13px;
-  padding-left: 45px;
+  padding-left: 49px;
   color: grey;
 }
 
@@ -181,4 +183,33 @@ h5 {
 .tag-default {
   background-color: #ededed;
   color: #545454;
+}
+
+.repodesc {
+  font-size: 12px;
+  margin-top: -10px;
+  padding-top: -10px;
+}
+
+.eventtime {
+  font-size: 12px;
+}
+
+.language {
+  font-size: 14px;
+}
+
+.starredsearch {
+  max-width: 300px !important;
+}
+
+.unfollow {
+  margin-left: 400px;
+  align-self: stretch;
+  color: black;
+  font-size: 14px;
+}
+
+.unfollowbutton {
+  float: right;
 }

@@ -7,8 +7,10 @@
         <div>
           <% @following.each do |following| %>
           <%= image_tag(following.profile_picture, size: "45x45") %>
-          <span class="followsnamelist"> <%= following.name %> </span> <span class="followsuserlist"> <%= following.username %></span><br>
-          <span class="followslocation"><%= octicon "location" %><%= following.location %></span>
+          <span class="followsnamelist"> <%= following.name %> </span> <span class="followsuserlist"> <%= following.username %></span>
+          <span class="unfollowbutton"><a class="btn btn-default unfollow" href="#" role="button"> Unfollow</a></span>
+          <br>
+          <span class="followslocation"><%= octicon "location" %> <%= following.location %></span>
           <hr>
           <% end %>
         </div>

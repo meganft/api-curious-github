@@ -14,7 +14,7 @@
           <div class="form-group">
             <span class="searchrepo"><input type="text" class="form-control" placeholder="Search Repositories...">
             <div class="btn-group">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button type="button" class="btn btn-default dropdown-toggle language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Type: <b>All</b> <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
@@ -27,7 +27,7 @@
               </ul>
             </div>
             <div class="btn-group">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button type="button" class="btn btn-default dropdown-toggle language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Language: <b>All</b> <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
@@ -36,7 +36,7 @@
                 <li><a href="#">Ruby</a></li>
               </ul>
             </div>
-            <a class="btn btn-success" href="#" role="button"><%= octicon "repo"%> New</a>
+            <a class="btn btn-success language" href="#" role="button"><%= octicon "repo"%> New</a>
           </span>
           </div>
             </div>
@@ -46,6 +46,9 @@
         <% @repos.each do |repo| %>
         <span class="reponamelist"<%= link_to repo.name, repo.url %></span><br>
         <span class="language font" style="font-size:12px;">
+          <% if repo.description != nil %>
+          <%= repo.description %><br>
+          <% end %>
           <% if repo.language == 'Ruby' %>
           <%= image_tag("circle_red.png", size:"12x12") %>
           <%= repo.language %>
