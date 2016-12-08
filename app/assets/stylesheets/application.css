@@ -85,7 +85,7 @@ a:hover {
 }
 
 .pinned-repos {
-  margin-top: -400px;
+  margin-top: -420px;
 }
 
 .repo-list {
@@ -101,6 +101,8 @@ a:hover {
 .customrepotext {
   text-align: right;
   padding-left: 100px;
+  font-size: 13px;
+  color: grey;
 }
 
 .usernametitle {
@@ -174,4 +176,9 @@ a:hover {
 
 h5 {
   text-align: center;
+}
+
+.tag-default {
+  background-color: #ededed;
+  color: #545454;
 }

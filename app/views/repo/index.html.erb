@@ -37,13 +37,11 @@
               </ul>
             </div>
             <a class="btn btn-success" href="#" role="button"><%= octicon "repo"%> New</a>
-          </p>
+          </span>
           </div>
             </div>
         </form>
-
       <hr>
-
       <div class="repos" style="padding-right:20px">
         <% @repos.each do |repo| %>
         <span class="reponamelist"<%= link_to repo.name, repo.url %></span><br>
@@ -61,7 +59,6 @@
           <span class="lang" style="padding-left:12px">Updated <%= time_ago_in_words(repo.updated) %> ago </span></span>
           <hr>
           <% end %>
-
         </div>
       </div>
     </div>

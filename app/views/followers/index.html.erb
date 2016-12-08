@@ -1,4 +1,3 @@
-
 <div class="container">
   <div class="index-container">
     <div class="row">
@@ -6,16 +5,12 @@
       <div class="col-md-9 offset-md-3"> <%= render partial: 'shared/userprofilenav' %> </div>
       <div class="col-md-9 offset-md-3 repo-list">
         <div>
-
           <% @followers.each do |follower| %>
           <%= image_tag(follower.profile_picture, size: "45x45") %>
           <span class="followsnamelist"> <%= follower.name %> </span> <span class="followsuserlist"> <%= follower.username %></span><br>
           <span class="followslocation"><%= octicon "location" %><%= follower.location %></span>
-
           <hr>
           <% end %>
-
         </div>
       </div>
-      <%#= link_to "Logout", logout_path, method: :delete %>
     </div>
