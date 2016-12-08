@@ -15,7 +15,6 @@
     <% @user_events.each do |event| %>
     <%= link_to event.username %> <%= event.event_type %> <%= link_to event.repo_name %><br>
     <span class="eventtime"><%= time_ago_in_words(event.created_at) %> ago</span>
-
     <hr>
     <% end %>
     <% end %>

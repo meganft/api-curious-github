@@ -7,19 +7,7 @@ require 'spec_helper'
 require 'rspec/rails'
 
 
-def stub_omniauth
-  OmniAuth.config.test_mode = true
-  OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
-    'provider' => 'github',
-    'uid' => '12345',
-    'info' => {
-              'name' => 'sally',
-              'nickname' => 'sallystub'
-                      },
-                      'credentials' => {'token' => ENV['gitub_user_token']
-                      }
-    })
-end
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

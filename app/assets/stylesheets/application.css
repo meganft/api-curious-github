@@ -24,13 +24,11 @@
 /*border: 1px solid black;*/
 }
 
-
 .form-control  {
   max-height: 30px;
   width: 350px !important;
   display:inline;
 }
-
 
 .navbar {
   padding-left: 125px;
@@ -80,24 +78,23 @@ a:hover {
   text-decoration: bold;
 }
 
-.navhomeshow .nav-link a.nav-link-active {
-  color: red !important;
-  border-bottom: 1px solid red;
-}
-
 .pinned-repos {
-  margin-top: -450px;
+  margin-top: -440px;
 }
 
 .repo-list {
   margin-top: -450px;
   font-size: 20px;
 }
+.card {
+  display: inline-block;
+}
 
 .card-block {
   text-align: left;
   max-height: 100px;
   padding: 1.15em;
+  width: 340px;
 }
 
 .customrepotext {
@@ -173,6 +170,7 @@ a:hover {
 .userevents {
   padding-left: 410px;
   padding-right: 200px;
+  margin-top: -30px;
   font-size: 14px;
 }
 

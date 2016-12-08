@@ -1,6 +1,6 @@
 class Repo
 
-  attr_reader :id, :name, :language, :url, :updated, :fork, :description
+  attr_reader :id, :name, :language, :url, :updated, :fork, :description, :full_name
 
   def initialize(attributes={})
     @id = attributes[:id]
@@ -10,6 +10,7 @@ class Repo
     @updated = attributes[:updated_at]
     @fork = attributes[:fork]
     @description = attributes[:description]
+    @full_name = attributes[:full_name]
   end
 
   def self.by_user(token)

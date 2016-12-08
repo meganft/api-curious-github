@@ -33,7 +33,7 @@
 
         <div>
           <% @starred.each do |starred| %>
-          <span class="reponamelist"><%= link_to starred.name, starred.url %></span><br>
+          <span class="reponamelist"><%= link_to starred.full_name, starred.url %></span><br>
           <span class="language font" style="font-size:12px;">
             <% if starred.language == 'Ruby' %>
             <%= image_tag("circle_red.png", size:"12x12") %>
