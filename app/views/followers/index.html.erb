@@ -1,0 +1,21 @@
+
+<div class="container">
+  <div class="index-container">
+    <div class="row">
+      <div class="col-md-3"> <%= render partial: 'shared/sidenav' %></div>
+      <div class="col-md-9 offset-md-3"> <%= render partial: 'shared/userprofilenav' %> </div>
+      <div class="col-md-9 offset-md-3 repo-list">
+        <div>
+
+          <% @followers.each do |follower| %>
+          <%= image_tag(follower.profile_picture, size: "20x20") %>
+            <span class="reponamelist"> <%= follower.name %> <%= follower.username %></span><br>
+            <%= octicon "location" %><%= follower.location %>
+
+              <hr>
+      <% end %>
+
+    </div>
+  </div>
+<%= link_to "Logout", logout_path, method: :delete %>
+</div>

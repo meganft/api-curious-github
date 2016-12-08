@@ -3,7 +3,7 @@ class Profile
   attr_reader :username, :name, :email, :profile_picture, :location, :joined_date
 
   def initialize(attributes={})
-    @username = attributes[:username]
+    @username = attributes[:login]
     @name = attributes[:name]
     @email = attributes[:email]
     @profile_picture = attributes[:avatar_url]

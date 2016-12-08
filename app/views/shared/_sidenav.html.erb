@@ -10,5 +10,10 @@
       <% newdate = DateTime.parse(current_user.joined_date) %>
       <%= image_tag("time-clock.png", size: "13x13") %> Joined on <%= newdate.strftime('%b %d, %Y') %><br>
     </div>
+    <hr>
+    <h6><strong>Organizations</strong></h6>
+    <% organizations.each do |org| %>
+    <%= link_to image_tag(org.image, size: "20x20"), org.url %>
+    <% end %>
   </nav>
 </div>
