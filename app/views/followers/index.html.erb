@@ -8,9 +8,9 @@
         <div>
 
           <% @followers.each do |follower| %>
-          <%= image_tag(follower.profile_picture, size: "20x20") %>
-            <span class="reponamelist"> <%= follower.name %> <%= follower.username %></span><br>
-            <%= octicon "location" %><%= follower.location %>
+          <%= image_tag(follower.profile_picture, size: "45x45") %>
+            <span class="followsnamelist"> <%= follower.name %> </span> <span class="followsuserlist"> <%= follower.username %></span><br>
+            <span class="followslocation"><%= octicon "location" %><%= follower.location %></span>
 
               <hr>
       <% end %>

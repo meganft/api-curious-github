@@ -6,11 +6,10 @@
       <div class="col-md-9 offset-md-3"> <%= render partial: 'shared/userprofilenav' %> </div>
       <div class="col-md-9 offset-md-3 repo-list">
         <div>
-
-          <% @following.each do |following| %>
-          <%= image_tag(following.profile_picture, size: "20x20") %>
-            <span class="reponamelist"> <%= following.name %> <%= following.username %></span><br>
-            <%= octicon "location" %><%= following.location %>
+            <% @following.each do |following| %>
+            <%= image_tag(following.profile_picture, size: "45x45") %>
+              <span class="followsnamelist"> <%= following.name %> </span> <span class="followsuserlist"> <%= following.username %></span><br>
+              <span class="followslocation"><%= octicon "location" %><%= following.location %></span>
 
               <hr>
       <% end %>

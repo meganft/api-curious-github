@@ -1,6 +1,18 @@
 <div class="container"><br>
   <div class="homeindex">
-<h2>Welcome to Github via MegHub</h2>
-<%= link_to "Login", "https://github.com/login/oauth/authorize?client_id=#{ENV['github_client_id']}&scope=repo" %>
+    <br>
+<h2>Welcome to Github via MegHub</h2><br>
+<%= link_to "Login with Github here", "https://github.com/login/oauth/authorize?client_id=#{ENV['github_client_id']}&scope=repo" %>
+</div>
+
+
+<div class="events">
+  <h5>Recent Activity</h5>
+  <br>
+<% @events.each do |event| %>
+<%= link_to event.username %> <%= event.event_type %> <%= link_to event.repo_name %><br>
+<hr>
+<% end %>
+<hr>
 </div>
 </div>

@@ -10,5 +10,16 @@
       <div class="col-md-9 offset-md-3"> <%= render partial: 'shared/popularrepos' %> </div>
     </div>
   </div>
-<%= link_to "Logout", logout_path, method: :delete %>
+
+
+  <div class="userevents">
+    <h5>Your Recent Activity</h5>
+    <br>
+  <% @user_events.each do |event| %>
+  <%= link_to event.username %> <%= event.event_type %> <%= link_to event.repo_name %><br>
+  <hr>
+  <% end %>
+  <hr>
+  </div>
+
 </div>

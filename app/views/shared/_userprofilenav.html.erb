@@ -1,23 +1,23 @@
 <div class="navhomeshow">
 
-<ul class="nav nav-tabs" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link-active" data-toggle="tab" href="/dashboard" role="tab">Overview</a>
-  </li>
-  <li class="nav-item" style="padding-left:10px">
-    <a class="nav-link" href="/repositories">Repositories <span class="tag tag-pill tag-default"><%= @repos.count %></span></a>
-  </li>
-  <li class="nav-item" style="padding-left:15px">
-    <a class="nav-link" href="/starred">Starred <span class="tag tag-pill tag-default"> <%= starred_count %> </span></a>
-  </li>
-  <li class="nav-item" style="padding-left:15px">
-    <a class="nav-link disabled" href="#">Followers <span class="tag tag-pill tag-default"> <%= followers_count %> </span></a>
-  </li>
 
-  <li class="nav-item" style="padding-left:10px">
-    <a class="nav-link disabled" href="#">Following<span class="tag tag-pill tag-default"> <%= following_count %> </span> </a>
-  </li>
-</ul>
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="/dashboard" role="tab">Overview</a>
+    </li>
+    <li class="nav-item" style="padding-left:10px">
+      <a class="nav-link" data-toggle="tab" href="/repositories" role="tab">Repositories <span class="tag tag-pill tag-default"><%= @repos.count %></span></a>
+    </li>
+    <li class="nav-item" style="padding-left:15px">
+      <a class="nav-link" data-toggle="tab" href="/starred" > Starred <span class="tag tag-pill tag-default"> <%= starred_count %> </span></a>
+    </li>
+    <li class="nav-item" style="padding-left:15px">
+      <a class="nav-link" data-toggle="tab" href="/followers"> Followers <span class="tag tag-pill tag-default"> <%= followers_count %> </span></a>
+    </li>
 
-<hr>
+    <li class="nav-item" style="padding-left:10px">
+      <a class="nav-link" data-toggle="tab" href="/following"> Following<span class="tag tag-pill tag-default"> <%= following_count %> </span> </a>
+    </li>
+  </ul>
+</br>
 </div>

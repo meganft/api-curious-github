@@ -68,7 +68,6 @@ a:hover {
   max-height: 25px;
 }
 
-
 .navhomeshow .nav-link {
   color: grey;
   font-family: Helvetica;
@@ -76,19 +75,17 @@ a:hover {
   border: none;
 }
 
-.navhomeshow a.nav-link-active {
+.nav-link:focus, .nav-link:hover {
+  text-decoration: bold;
+}
+
+.navhomeshow .nav-link a.nav-link-active {
   color: red !important;
   border-bottom: 1px solid red;
 }
 
-
-.navhomeshow .nav-link {
-  color: grey;
-}
-
 .pinned-repos {
   margin-top: -400px;
-
 }
 
 .repo-list {
@@ -100,7 +97,6 @@ a:hover {
   text-align: left;
   max-height: 100px;
 }
-
 
 .customrepotext {
   text-align: right;
@@ -117,10 +113,10 @@ a:hover {
 }
 
 ::-webkit-input-placeholder {
-   font-size: 14px;
-   color: #bdbdbd !important;
-   font-family: Helvetica;
-   font-weight: lighter;
+  font-size: 14px;
+  color: #bdbdbd !important;
+  font-family: Helvetica;
+  font-weight: lighter;
 }
 
 .repolangpinned {
@@ -134,11 +130,47 @@ a:hover {
   color: #4078c0;
 }
 
+.followsnamelist {
+  color: black;
+  font-size: 16px;
+}
+
+.followsuserlist {
+  font-size: 13px;
+  padding-left: 11px;
+  color: grey;
+}
+
+.followslocation {
+  font-size: 13px;
+  padding-left: 45px;
+  color: grey;
+}
 
 .btn-default:hover {
-    background-color: #d3d3d3 !important;
+  background-color: #d3d3d3 !important;
 }
 
 .btn-default {
-    background-color: #f1f1f1 !important;
+  background-color: #f1f1f1 !important;
+}
+
+.customrepotext {
+  text-align: left;
+  padding-left: 300px;
+}
+
+.events {
+  padding-top: 100px;
+  padding-left: 225px;
+  padding-right: 200px;
+}
+
+.userevents {
+  padding-left: 400px;
+  padding-right: 200px;
+}
+
+h5 {
+  text-align: center;
 }
