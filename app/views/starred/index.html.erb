@@ -6,6 +6,7 @@
       <div class="col-md-9 offset-md-3"> <%= render partial: 'shared/userprofilenav' %> </div>
       <div class="col-md-9 offset-md-3 repo-list">
         <div>
+
           <% @starred.each do |starred| %>
           <span class="reponamelist"><%= link_to starred.name, starred.url %></span><br>
           <span class="language font" style="font-size:12px;">

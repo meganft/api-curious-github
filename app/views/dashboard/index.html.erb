@@ -13,13 +13,15 @@
 
 
   <div class="userevents">
-    <h5>Your Recent Activity</h5>
+    <h6>Contribution Activity</h6>
     <br>
-  <% @user_events.each do |event| %>
-  <%= link_to event.username %> <%= event.event_type %> <%= link_to event.repo_name %><br>
-  <hr>
-  <% end %>
-  <hr>
+    <% if session[:user_id] != nil %>
+    <% @user_events.each do |event| %>
+    <%= link_to event.username %> <%= event.event_type %> <%= link_to event.repo_name %><br>
+    <hr>
+    <% end %>
+    <% end %>
+    <hr>
   </div>
 
 </div>

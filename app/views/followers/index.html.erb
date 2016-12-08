@@ -9,13 +9,13 @@
 
           <% @followers.each do |follower| %>
           <%= image_tag(follower.profile_picture, size: "45x45") %>
-            <span class="followsnamelist"> <%= follower.name %> </span> <span class="followsuserlist"> <%= follower.username %></span><br>
-            <span class="followslocation"><%= octicon "location" %><%= follower.location %></span>
+          <span class="followsnamelist"> <%= follower.name %> </span> <span class="followsuserlist"> <%= follower.username %></span><br>
+          <span class="followslocation"><%= octicon "location" %><%= follower.location %></span>
 
-              <hr>
-      <% end %>
+          <hr>
+          <% end %>
 
+        </div>
+      </div>
+      <%#= link_to "Logout", logout_path, method: :delete %>
     </div>
-  </div>
-<%= link_to "Logout", logout_path, method: :delete %>
-</div>

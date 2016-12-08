@@ -1,5 +1,5 @@
 require 'rails_helper'
-#add test for 6 popular
+
 
 describe "Repo" do
   context ".by_user(token)" do
@@ -26,6 +26,19 @@ describe "Repo" do
         expect(starred).to be_a(Array)
         expect(starred[0]).to respond_to(:id)
         expect(starred[0]).to respond_to(:url)
+      end
+    end
+  end
+
+  context ".six_popular" do
+    it "returns six top repos for a user" do
+      VCR.use_cassette(".six_popular") do
+        token = ENV["github_user_token"]
+        six_popular = Repo.six_popular(token)
+
+        expect(six_popular).to be_a(Array)
+        expect(six_popular[0]).to respond_to(:id)
+        expect(six_popular[0]).to respond_to(:url)
       end
     end
   end

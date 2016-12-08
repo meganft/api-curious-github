@@ -7,8 +7,7 @@
       <hr>
       <%= image_tag("Location-512.png", size: "13x13") %>
       <%= current_user.location %><br>
-      <% newdate = DateTime.parse(current_user.joined_date) %>
-      <%= image_tag("time-clock.png", size: "13x13") %> Joined on <%= newdate.strftime('%b %d, %Y') %><br>
+      <%= image_tag("time-clock.png", size: "13x13") %> Joined on <%= current_user.joined_date.to_datetime.strftime("%b %d, %Y") %><br>
     </div>
     <hr>
     <h6><strong>Organizations</strong></h6>
