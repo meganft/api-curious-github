@@ -2,6 +2,8 @@
 
 This project used the Github API to consume data and display it to the screen in the same format as Github.com.
 
+![mentorship](https://s3-us-west-2.amazonaws.com/turingmentorship/github_api.gif)
+
 
 To run locally:
 ```
