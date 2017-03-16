@@ -1,6 +1,6 @@
 # README
 
-This project used the Github API to consume data and display it to the screen in the same format as Github.com.
+This project used the Github API to consume data and display it back to the screen in the same format as Github.com as shown here:
 
 ![mentorship](https://s3-us-west-2.amazonaws.com/turingmentorship/github_api.gif)
 
